@@ -1,0 +1,36 @@
+<h1>Your question: <%= @question %></h1>
+<% if @question[-1] == "?" %>
+    <div class="card-question">
+      <p>
+        <%= @question  %>
+      </p>
+      <p>-You</p>
+    </div>
+    <div class="card-answer">
+      <p>Silly question, get dressed and go to work!</p>
+      <p>-Your coach</p>
+    </div>
+  <% elsif @question == "I am going to work" %>
+    <div class="card-question">
+      <p>
+        <%= @question  %>
+      </p>
+      <p>-You</p>
+    </div>
+    <div class="card-answer">
+      <p>Great!</p>
+      <p>-Your coach</p>
+    </div>
+  <% else %>
+    <div class="card-question">
+      <p>
+        <%= @question  %>
+      </p>
+      <p>-You</p>
+    </div>
+    <div class="card-answer">
+      <p>I don't care, get dressed and go to work!</p>
+      <p>-Your coach</p>
+    </div>
+<% end %>
+<%= link_to "Type a new question", ask_path %>
